@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/SqlDS.xsd" xmlns="http://tempuri.org/SqlDS.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/SqlDS.xsd" id="SqlDS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="SqlDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Proceds_Especs">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_espec" type="xs:int" />
+              <xs:element name="descr">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cod_proced" type="xs:long" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EspecProced">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="cod" type="xs:long" />
+              <xs:element minOccurs="0" name="Descr" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ListaProcedsEspecs">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Cod_Espec" type="xs:int" />
+              <xs:element minOccurs="0" name="Especialidade" type="xs:string" />
+              <xs:element minOccurs="0" name="Cod_Proced" type="xs:long" />
+              <xs:element minOccurs="0" name="Procedimento" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:Proceds_Especs" />
+      <xs:field xpath="mstns:cod_espec" />
+      <xs:field xpath="mstns:cod_proced" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

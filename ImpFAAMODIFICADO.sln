@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImpFAAMODIFICADO", "ImpFAAMODIFICADO.csproj", "{C32CF02B-3E61-43FA-8802-71D653F10688}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "novaFaaAtualSetUp", "..\novaFaaAtualSetUp\novaFaaAtualSetUp.vdproj", "{90B5F60F-F913-43F5-BC2A-29ADF81F70EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C32CF02B-3E61-43FA-8802-71D653F10688}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C32CF02B-3E61-43FA-8802-71D653F10688}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C32CF02B-3E61-43FA-8802-71D653F10688}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C32CF02B-3E61-43FA-8802-71D653F10688}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90B5F60F-F913-43F5-BC2A-29ADF81F70EF}.Debug|Any CPU.ActiveCfg = Debug
+		{90B5F60F-F913-43F5-BC2A-29ADF81F70EF}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

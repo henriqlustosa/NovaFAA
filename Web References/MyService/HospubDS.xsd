@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://hspm.org/HospubDS.xsd" xmlns="http://hspm.org/HospubDS.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://hspm.org/HospubDS.xsd" id="HospubDS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="HospubDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="EspecsHospub">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ia9codprin">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ia9codsub">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ia9descr">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="procsHospub">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ib8descr">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ib8grusubniv" type="xs:decimal" />
+              <xs:element name="ib8compl" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Especialidades">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Codigo" type="xs:int" />
+              <xs:element minOccurs="0" name="Nome" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Procedimentos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Codigo" type="xs:int" />
+              <xs:element minOccurs="0" name="Descricao" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:EspecsHospub" />
+      <xs:field xpath="mstns:ia9codprin" />
+      <xs:field xpath="mstns:ia9codsub" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="procsHospub_Constraint1">
+      <xs:selector xpath=".//mstns:procsHospub" />
+      <xs:field xpath="mstns:ib8grusubniv" />
+      <xs:field xpath="mstns:ib8compl" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="Especialidades_Constraint1">
+      <xs:selector xpath=".//mstns:Especialidades" />
+      <xs:field xpath="mstns:Codigo" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="Procedimentos_Constraint1">
+      <xs:selector xpath=".//mstns:Procedimentos" />
+      <xs:field xpath="mstns:Codigo" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
